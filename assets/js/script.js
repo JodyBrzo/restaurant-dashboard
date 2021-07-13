@@ -163,6 +163,7 @@ function populateData()
 
         $("#contentMain").hide();
         $("#restaurantContainer").show();
+        $("#searchLink").show();
         $("#mapLink").show();
         $("#favoritesLink").show();
         $("#pagination").show();
@@ -396,12 +397,16 @@ $(document).ready(function ()
 
     $("#searchLink").click(function (event) //event handler for the search link to return to the search page
     {   
+        deliData = null;
         $("#contentMain").show();
+        $("#restaurantContainer").hide();
         $("#favoritesLink").show();
         $("#favorites").hide();
         $("#findtext").val("");
         $("#findlocate").val("");
+        $("#mapLink").hide();
         $("#mapContainer").hide();
         $("#searchLink").hide();
+        $("#pagination").hide();
     });
 });
